@@ -29,14 +29,14 @@ public class Retrofit {
     }
 
     public <T> T create(final Class<T> aClass) {
-        InvocationHandler invocationHandler = new InvocationHandler() {
+        InvocationHandler handler = new InvocationHandler() {
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) {
                 ServiceMethod serviceMethod = loadServiceMethod(method);
                 return serviceMethod.toCall(args);
             }
         };
-        return (T) Proxy.newProxyInstance(aClass.getClassLoader(), new Class<?>[]{aClass}, invocationHandler);
+        return (T) Proxy.newProxyInstance(aClass.getClassLoader(), new Class<?>[]{aClass}, handler);
     }
 
     private ServiceMethod loadServiceMethod(Method method) {
