@@ -1,5 +1,5 @@
-## Retrofit 动态代理
-1. 把method转换成ServiceMethod；  
+## Retrofit 动态代理 
+1. 把我们所定义接口中的method转换成ServiceMethod；  
 2. 通过serviceMethod，args获取到okHttpCall对象；  
 3. 把okHttpCall进一步封装并返回Call对象。  
 
