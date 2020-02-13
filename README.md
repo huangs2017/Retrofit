@@ -1,7 +1,7 @@
 ## Retrofit 动态代理
 1. 把method转换成ServiceMethod；  
 2. 通过serviceMethod，args获取到okHttpCall对象；  
-3. 再把okHttpCall进一步封装并返回Call对象。  
+3. 把okHttpCall进一步封装并返回Call对象。  
 
 ```java
 public <T> T create(final Class<T> aClass) {
