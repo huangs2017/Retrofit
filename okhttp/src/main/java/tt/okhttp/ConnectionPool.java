@@ -8,7 +8,7 @@ import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-import test.LogUtil;
+import test.Log;
 
 public class ConnectionPool {
 
@@ -98,7 +98,7 @@ public class ConnectionPool {
                 if (idleDuration > keepAliveDuration) {
                     socketConnect.close();       // 重点====================
                     i.remove();                  // 重点====================
-                    LogUtil.e("移出连接池");
+                    Log.e("移出连接池");
                     continue;
                 }
                 // 获得最大闲置时间

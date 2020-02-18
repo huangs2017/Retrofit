@@ -6,12 +6,12 @@ import tt.okhttp.SocketConnect;
 import tt.okhttp.bean.HttpUrl;
 import tt.okhttp.bean.Request;
 import tt.okhttp.bean.Response;
-import test.LogUtil;
+import test.Log;
 
 public class ConnectionInterceptor implements Interceptor {
     @Override
     public Response intercept(InterceptorChain chain) throws IOException {
-        LogUtil.i("连接拦截器....");
+        Log.i("连接拦截器....");
         Request request = chain.call.request();
         HttpUrl url = request.url();
         String host = url.getHost();

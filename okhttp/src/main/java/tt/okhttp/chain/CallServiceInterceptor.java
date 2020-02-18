@@ -7,13 +7,13 @@ import tt.okhttp.SocketConnect;
 import tt.okhttp.bean.Request;
 import tt.okhttp.bean.Response;
 import tt.okhttp.NetDataPipe;
-import test.LogUtil;
+import test.Log;
 
 public class CallServiceInterceptor implements Interceptor {
 
     @Override
     public Response intercept(InterceptorChain chain) throws IOException {
-        LogUtil.i("通信拦截器....");
+        Log.i("通信拦截器....");
         NetDataPipe netDataPipe = chain.netDataPipe;
         SocketConnect socketConnect = chain.socketConnect;
         Request request = chain.call.request();

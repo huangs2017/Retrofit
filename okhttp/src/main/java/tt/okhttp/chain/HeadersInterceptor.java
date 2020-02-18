@@ -4,13 +4,13 @@ import java.io.IOException;
 import java.util.Map;
 import tt.okhttp.bean.Request;
 import tt.okhttp.bean.Response;
-import test.LogUtil;
+import test.Log;
 
 public class HeadersInterceptor implements Interceptor {
 
     @Override
     public Response intercept(InterceptorChain chain) throws IOException {
-        LogUtil.i("Http头拦截器....");
+        Log.i("Http头拦截器....");
         Request request = chain.call.request();
         Map<String, String> headers = request.headers();
         headers.put("Host", request.url().getHost());

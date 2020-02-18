@@ -44,7 +44,7 @@ public class RetrofitActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(Response response) {
-                LogUtil.e("Retrofit get 请求结果--> "+ response.getBody());
+                Log.e("Retrofit get 请求结果--> "+ response.getBody());
             }
         });
     }
@@ -59,7 +59,7 @@ public class RetrofitActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(Response response) {
-                LogUtil.e("Retrofit post 请求结果--> "+ response.getBody());
+                Log.e("Retrofit post 请求结果--> "+ response.getBody());
             }
         });
     }

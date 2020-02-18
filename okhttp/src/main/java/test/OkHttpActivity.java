@@ -35,7 +35,7 @@ public class OkHttpActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(Response response) {
-                LogUtil.e("OkHttp get 请求结果--> "+ response.getBody());
+                Log.e("OkHttp get 请求结果--> "+ response.getBody());
 
             }
         });
@@ -59,7 +59,7 @@ public class OkHttpActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(Response response) {
-                LogUtil.e("OkHttp post 请求结果--> "+ response.getBody());
+                Log.e("OkHttp post 请求结果--> "+ response.getBody());
             }
         });
     }
